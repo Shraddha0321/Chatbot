@@ -2,17 +2,6 @@
   "intents": [
 
       {
-          "tag": "google",
-          "patterns": [
-              "google",
-              "search",
-              "internet"
-          ],
-          "responses": [
-              "Redirecting to Google..."
-          ]
-      },
-      {
           "tag": "greeting",
           "patterns": [
               "Hi there",
@@ -93,7 +82,7 @@
               "What support is offered"
           ],
           "responses": [
-              "I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me for jokes or riddles! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' \n For suggestions to help me improve, send an email to ted.thedlbot.suggestions@gmail.com . Thank you!! "
+              "I am a general purpose chatbot. My capabilities are : \n 1. I can chat with you. Try asking me Admission process! \n 2. Ask me the date and time \n 3. I can google search for you. Use format google: your query \n 4. I can get the present weather for any city. Use format weather: city name \n 5. I can get you the top 10 trending news in India. Use keywords 'Latest News' \n 6. I can get you the top 10 trending songs globally. Type 'songs' \n 7. I can set a timer for you. Enter 'set a timer: minutes to timer' \n 8. I can get the present Covid stats for any country. Use 'covid 19: world' or 'covid 19: country name' \n For suggestions to help me improve, send an email to ted.thedlbot.suggestions@gmail.com . Thank you!! "
           ],
           "context": [
               ""
@@ -101,37 +90,13 @@
       },
       
       {
-          "tag": "jokes",
-          "patterns": [
-              "Tell me a joke",
-              "Joke",
-              "Make me laugh"
-          ],
-          "responses": [
-              "A perfectionist walked into a bar...apparently, the bar wasn't set high enough",
-              "I ate a clock yesterday, it was very time-consuming",
-              "Never criticize someone until you've walked a mile in their shoes. That way, when you criticize them, they won't be able to hear you from that far away. Plus, you'll have their shoes.",
-              "The world tongue-twister champion just got arrested. I hear they're gonna give him a really tough sentence.",
-              "I own the world's worst thesaurus. Not only is it awful, it's awful.",
-              "What did the traffic light say to the car? \"Don't look now, I'm changing.\"",
-              "What do you call a snowman with a suntan? A puddle.",
-              "How does a penguin build a house? Igloos it together",
-              "I went to see the doctor about my short-term memory problems – the first thing he did was make me pay in advance",
-              "As I get older and I remember all the people I’ve lost along the way, I think to myself, maybe a career as a tour guide wasn’t for me.",
-              "o what if I don't know what 'Armageddon' means? It's not the end of the world."
-          ],
-          "context": [
-              "jokes"
-          ]
-      },
-      {
           "tag": "Identity",
           "patterns": [
               "Who are you",
               "what are you"
           ],
           "responses": [
-              "I am Ted, a Deep-Learning chatbot"
+              "I am SK, a Deep-Learning chatbot"
           ]
       },
       {
@@ -294,9 +259,10 @@
               "latest news",
               "india news"
           ],
-          "responses": [
-              "..."
-          ]
+          "responses": ["Sure! Here are some of the latest news headlines:", 
+            "Let me fetch the most recent news for you:", 
+            "I can provide you with the latest news. Here are some headlines:"],
+         "action": "fetch_news"
       },
       {
           "tag": "inspire",
@@ -328,9 +294,11 @@
               " top 10 songs",
               "top ten songs"
           ],
-          "responses": [
-              "..."
-          ]
+          "responses": ["Sure! Here is a song you might like:", 
+          "Let me recommend a song for you:", 
+          "I can suggest a song for you. How about this one:"],
+          "action": "suggest_song"
+         
       },
       {
           "tag": "greetreply",
@@ -342,24 +310,6 @@
           ],
           "responses": [
               "Good to know!"
-          ]
-      },
-      {
-          "tag": "timer",
-          "patterns": [
-              "set a timer"
-          ],
-          "responses": [
-              "..."
-          ]
-      },
-      {
-          "tag": "covid19",
-          "patterns": [
-              "covid 19 "
-          ],
-          "responses": [
-              "..."
           ]
       },
       {
